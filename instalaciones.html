@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones</title>
+    <style>
+        body {
+            background-color: rgb(60, 204, 60);
+        }
+
+        .titulo {
+            color: white;
+            font-size: 75px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .subtitulo {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 200px;
+        }
+        .ver{
+            list-style-type: none; /* Elimina el estilo de lista predeterminado */
+            margin: 0; /* Elimina el margen por defecto */
+            margin-top: 50px; /* Agrega un margen superior de 50px */
+            padding: 0; /* Elimina el relleno por defecto */
+            width: 145px; /* Define un ancho fijo para la lista */
+            background-color: white; /* Establece el color de fondo en negro */
+            height: 100%; /* Define la altura al 100% de la pantalla */
+            position: fixed; /* Fija la lista en su posición en la pantalla */
+            overflow: auto; /* Habilita el scroll si el contenido desborda */
+        }
+        
+        /* Estilo para los enlaces dentro de la lista de navegación */
+        .ver li a{
+            display: block; /* Hace que los enlaces sean bloques, ocupando todo el ancho del contenedor */
+            color: black; /* Establece el color del texto en blanco */
+            padding: 14px 16px; /* Define el relleno interno del enlace */
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            /*font-family: "Lucida Console", Monaco, monospace;  Aplica la fuente especificada */
+        }
+        
+        /* Estilo para los elementos de la lista */
+        .ver li{
+            text-align: center; /* Centra el texto dentro de los elementos de la lista */
+        }
+        
+        /* Estilo para los enlaces al pasar el cursor sobre ellos */
+        .ver li a:hover:not(.active){
+            background-color: gray; /* Cambia el color de fondo a gris al pasar el cursor */
+        }
+        
+        /* Estilo para los enlaces activos */
+        .ver li a.active{
+            background-color: gray; /* Cambia el color de fondo a gris para el enlace activo */
+        }
+        .tabla{
+            color:white;
+            font-size: 25px;
+        }
+        .contenedor {
+            display: flex;
+            justify-content: center;
+        }
+        .imagen {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="ver">
+        <li><a href="Index.html">Inicio</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="Inscripcion.html">Inscripción</a></li>
+    </ul>
+    <h1 class="titulo"><u>Instalaciones</u></h1>
+    <p class="subtitulo">En Sportiverse contamos con las mejores instalaciones para que puedas disfrutar de tu deporte favorito. Contamos con:</p>
+    <br>
+    <div class="tabla">
+        <center><ul>
+            <li>Campos de futbol (F-11 - Fútbol Sala)</li>
+            <li>Pista de padel</li>
+            <li>Campos de baloncesto</li>
+            <li>Piscina</li>
+            <li>Sala de multiusos</li>
+        </ul></center>
+    </div>
+    <div class="contenedor">
+        <a href="imagenes/campoFutbol11.jpg"><img class="imagen" src="imagenes/campoFutbol11.jpg" alt="Campo de futbol 11"></a> 
+        <a href="imagenes/campoFutbol5_2.jpg"><img class="imagen" src="imagenes/campoFutbol5_2.jpg" alt="Campo de futbol 5"></a> 
+    </div>
+    <div class="contenedor">
+        <a href="imagenes/pistaPadel.jpg"><img class="imagen" src="imagenes/pistaPadel.jpg" alt="Pista de padel"></a> 
+        <a href="imagenes/campoBaloncesto.jpg"><img class="imagen" src="imagenes/campoBaloncesto.jpg" alt="Campo de baloncesto"></a> 
+    </div>
+    <div class="contenedor">
+        <a href="imagenes/piscina.jpeg"><img class="imagen" src="imagenes/piscina.jpeg" alt="Piscina"></a> 
+        <a href="imagenes/salaMultiusos.jpg"><img class="imagen" src="imagenes/salaMultiusos.jpg" alt="Sala de multiusos"></a> 
+    </div>
+    <p class="subtitulo">También ofrecemos actividades en el medio natural, para ello contamos con nuestro Parque Tamarguillo:</p>
+    <center><a href="imagenes/tamarguillo.jpg"><img class="imagen" src="imagenes/tamarguillo.jpg" alt="Parque Tamarguillo"></a></center>
+    <p class="subtitulo">Además, contamos con un bar en el que podrás tomar algo y con vestuarios y duchas para que puedas cambiarte y asearte después de practicar deporte.</p>
+    <p class="titulo">¡Ven a visitarnos!</p>
+    
+</body>
+</html>

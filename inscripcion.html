@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Inscripción</title>
+    <!-- Enlace a la hoja de estilo externa CSS.css -->
+    <link rel="stylesheet" href="CSS.css">
+    <style>
+        /* Estilo para el título principal */
+        .titulo {
+            color: white;
+            font-size: 75px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .subtitulo {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Estilo para el contenedor principal que envuelve el formulario */
+        .container{
+            padding: 50px;
+            margin-left: 250px;
+            margin-right: 100px;
+        }
+
+        /* Estilo para las etiquetas (labels) de los campos del formulario */
+        .label{
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Estilo para los campos de entrada de texto del formulario */
+        .input{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para el bloque de fecha de nacimiento */
+        .nacimiento{
+            width:96.5%;
+            display: flex;
+            gap: 100px;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px;
+            align-items: center;
+            color: #666;
+        }
+
+        /* Estilo para los select dentro de nacimiento */
+        .select > select{
+            border:1px solid #666;
+        }
+
+        /* Estilo para los campos select de fecha de nacimiento */
+        .nacimiento-select{
+            flex: 1;
+            padding: 8px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+        }
+
+        /* Estilo para los campos de sexo */
+        .sexo{
+            width:94.5%;
+            display: flex;
+            gap: 100px;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px;
+            align-items: center;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* Estilo para el bloque de datos personales */
+        .datos-personales{
+            flex:1;
+            padding:10px;
+        }
+
+        /* Estilo para el botón de enviar, centrándolo en la página */
+        .enviar{
+            display: grid;
+            place-items: center;
+        }
+
+        /* Estilo para el contenedor del formulario con sombra */
+        .contenido{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 20px;
+            background-color: white;
+        }
+
+        /* Estilo general para el formulario */
+        form{
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        .ver{
+            list-style-type: none; /* Elimina el estilo de lista predeterminado */
+            margin: 0; /* Elimina el margen por defecto */
+            margin-top: 50px; /* Agrega un margen superior de 50px */
+            padding: 0; /* Elimina el relleno por defecto */
+            width: 145px; /* Define un ancho fijo para la lista */
+            background-color: white; /* Establece el color de fondo en negro */
+            height: 100%; /* Define la altura al 100% de la pantalla */
+            position: fixed; /* Fija la lista en su posición en la pantalla */
+            overflow: auto; /* Habilita el scroll si el contenido desborda */
+        }
+        
+        /* Estilo para los enlaces dentro de la lista de navegación */
+        .ver li a{
+            display: block; /* Hace que los enlaces sean bloques, ocupando todo el ancho del contenedor */
+            color: black; /* Establece el color del texto en blanco */
+            padding: 14px 16px; /* Define el relleno interno del enlace */
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            /*font-family: "Lucida Console", Monaco, monospace;  Aplica la fuente especificada */
+        }
+        
+        /* Estilo para los elementos de la lista */
+        .ver li{
+            text-align: center; /* Centra el texto dentro de los elementos de la lista */
+        }
+        
+        /* Estilo para los enlaces al pasar el cursor sobre ellos */
+        .ver li a:hover:not(.active){
+            background-color: gray; /* Cambia el color de fondo a gris al pasar el cursor */
+        }
+        
+        /* Estilo para los enlaces activos */
+        .ver li a.active{
+            background-color: gray; /* Cambia el color de fondo a gris para el enlace activo */
+        }
+    </style>
+</head>
+<body style="background-color: rgb(60, 204, 60);">
+    <!-- Menú de navegación -->
+    <ul class="ver">
+        <li><a href="Index.html">Inicio</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="instalaciones.html">Instalaciones</a></li>
+    </ul>
+
+    <!-- Título de la página -->
+    <h1 class="titulo"><u>Inscripción</u></h1>
+    <h3 class="subtitulo">Rellena el siguiente formulario para formar parte de nuestra empresa:</h3>
+    <p><br></p>
+
+    <!-- Contenedor para el formulario -->
+    <div class="container">
+        <div class="contenido">
+            <!-- Formulario de inscripción -->
+            <form method="post" enctype="text/plain">
+                <div class="datos-personales">
+                    <h3>DATOS PERSONALES</h3>
+                    <!-- Campo de nombre y apellidos -->
+                    <label class="label" for="nombre">Nombre y apellidos</label>
+                    <input type="text" id="nombre" class="input" required>
+                    <!-- Campo de correo electrónico -->
+                    <label class="label" for="email">Correo</label>
+                    <input type="email" id="email" class="input" required>
+                    <!-- Campo de DNI -->
+                    <label class="label" for="dni">DNI</label>
+                    <input type="text" id="dni" class="input" required>
+                    <!-- Campo de teléfono -->
+                    <label class="label" for="tlf">Teléfono</label>
+                    <input type="text" id="tlf" class="input" required>
+
+                    <!-- Bloque para seleccionar la fecha de nacimiento -->
+                    <div class="nacimiento">
+                        <span>Fecha de nacimiento</span>
+                        <div class="select">
+                            <!-- Campo de día -->
+                            <select class="nacimiento-select" name="dia">
+                                <option value="" selected>día</option>
+                                <!-- Opciones de días del mes -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+
+                            <!-- Campo de mes -->
+                            <select class="nacimiento-select" name="mes">
+                                <option value="" selected>mes</option>
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+
+                            <!-- Campo de año -->
+                            <select class="nacimiento-select" name="anio">
+                                <option value="" selected>año</option>
+                                <option value="2018">2012</option>
+                                <option value="2017">2013</option>
+                                <option value="2017">2014</option>
+                                <option value="2017">2015</option>
+                                <option value="2017">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2017">2018</option>
+                                <option value="2017">2019</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Bloque para seleccionar el sexo -->
+                    <div class="sexo">
+                        <span class="nac-label">Sexo</span>
+                        <div class="select">
+                            <!-- Opciones de sexo (hombre o mujer) -->
+                            <input type="radio" id="h" name="sexo" value="h">
+                            <label for="h">Hombre</label>
+                            <input type="radio" id="m" name="sexo" value="m">
+                            <label for="m">Mujer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón de envío del formulario -->
+                <br><br>
+                <div class="enviar">
+                    <input type="submit"value="enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
